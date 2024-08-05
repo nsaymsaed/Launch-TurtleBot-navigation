@@ -59,6 +59,7 @@ you have 3 simulation environments are prepared for TurtleBot3.
 
 $ export TURTLEBOT3_MODEL=waffle
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+![Screenshot 2024-08-05 084831](https://github.com/user-attachments/assets/490c39cf-69d7-4b60-9546-96020b7fceb4)
 
 
 ## Now Opening SLAM
@@ -66,22 +67,20 @@ $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 using 
 
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
-
-
+![Screenshot 2024-08-05 084818](https://github.com/user-attachments/assets/b0f5b114-f9b6-4b13-9b25-3b2623ba5991)
 create a map and save it.
 
 rosrun map_server map_saver -f ~/map
 
 then you shouls run this command 
 rosrun map_server map_saver -f ~/map
-
-
+![Screenshot 2024-08-05 084759](https://github.com/user-attachments/assets/47b0711e-4787-45c3-b247-0ea6ba3b6fad)
 
 ## navigation 
 
 start, load the save map, write this command:
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:='/home/muh/map.yaml'
-
+![Screenshot 2024-08-05 084729](https://github.com/user-attachments/assets/5f6a0b1e-7a75-4cc4-a927-54a69228bf40)
 
 Finally you can use and move the robot as you want.
 
